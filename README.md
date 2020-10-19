@@ -1,7 +1,7 @@
 # Kali volatility installer
 
 If you researched a bit, the Volatility releases are not up to date and if you want to have an updated version you need to get Volatility from its GitHub 
-[repository](https://github.com/volatilityfoundation/volatility).
+[repository](https://github.com/volatilityfoundation/volatility). If you dont use Kali Linux you can get Volatility even from `apt` so you dont really need this.
 
 # The problem for Kali Users
 
