@@ -5,7 +5,7 @@
 If you researched a bit, the Volatility releases are not up to date and if you want to have an updated version you need to get Volatility from its GitHub 
 [repository](https://github.com/volatilityfoundation/volatility). If you dont use Kali Linux you can get Volatility from `apt`, even though, it is not the last version and i recommend getting Volatility from the GitHub repository (Should be easy if you can install or use pip for Python 2 unlike Kali).
 
-# Disclaimer
+## Disclaimer
 
 I tested this script in Kali Linux only, it should work in all Linux distributions with Bash but you know, it is not tested ^^. Also, this script will append this line: `PATH="$HOME/volatility:$PATH"` to your `.bashrc` in order to add Volatility to your path so if you dont use Bash as your main shell you will need to add that line to the correct file (For example, if you use `zsh` add the line to your `.zshrc` file).
 
