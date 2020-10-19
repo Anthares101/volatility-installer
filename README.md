@@ -8,7 +8,7 @@ If you researched a bit, the Volatility releases are not up to date and if you w
 # Important
 
 Install `python-dev` with `sudo apt install python-dev` before executing this installer. I decided to let this step to you because you need `sudo` for it and executing a hole
-script with it can be scary you know.
+script with elevated privileges can be scary you know.
 
 # The problem for Kali Users
 
