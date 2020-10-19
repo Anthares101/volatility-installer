@@ -50,8 +50,8 @@ printCommandResult
 
 # Create bash script for execution using path
 echo -ne "Create bash script for execution...\t\t"
-echo -e "#! /bin/bash\n\npython $HOME/volatility/vol.py \"\$@\"" > "${HOME}/volatility/volatility2.6"
-chmod u+x "${HOME}/volatility/volatility2.6" &> /dev/null
+echo -e "#! /bin/bash\n\npython $HOME/volatility/vol.py \"\$@\"" > "${HOME}/volatility/volatility2"
+chmod u+x "${HOME}/volatility/volatility2" &> /dev/null
 printCommandResult
 
 # Add to path
