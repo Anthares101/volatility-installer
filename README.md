@@ -1,3 +1,5 @@
+<img alt="GitHub" src="https://img.shields.io/badge/version-v1.0-blue"> <img alt="GitHub" src="https://img.shields.io/github/license/anthares101/kali_volatility_installer">
+
 # Kali Volatility installer
 
 If you researched a bit, the Volatility releases are not up to date and if you want to have an updated version you need to get Volatility from its GitHub 
