@@ -7,14 +7,14 @@ If you researched a bit, the Volatility releases are not up to date and if you w
 
 # Disclaimer
 
-I tested this script in Kali Linux only, it should work in all linux distributions with bash but you know, is not tested ^^. Also, this script will append this line:
+I tested this script in Kali Linux only, it should work in all linux distributions with bash but you know, it is not tested ^^. Also, this script will append this line:
 `PATH="$HOME/volatility:$PATH"` to your `.bashrc` in order to add Volatility to your path so if you dont use Bash as your main shell you will need to add that line to the
 correct file (For example, if you use `zsh` add the line to your `.zshrc` file).
 
 # The problem for Kali Users
 
 If you use Kali Linux, you may have noticed that python 2 support is... not good in Kali last updates, pip for Python 2 is not even installed and you cant add it from Kali 
-repositories. Volatility is affected by this because right now, it only works with Python 2 (I know they are working in Python 3 version but is not done yet) and you need to 
+repositories. Volatility is affected by this because right now, it only works with Python 2 (I know they are working in a Python 3 version but is not done yet) and you need to 
 install some dependencies.
 
 As i said before, pip for Python 2 is not available in Kali and getting the last volatility version to work can be a bit tricky.
