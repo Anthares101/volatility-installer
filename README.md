@@ -5,6 +5,11 @@
 If you researched a bit, the Volatility releases are not up to date and if you want to have an updated version you need to get Volatility from its GitHub 
 [repository](https://github.com/volatilityfoundation/volatility). If you dont use Kali Linux you can get Volatility even from `apt` so you dont really need this.
 
+# Important
+
+Install `python-dev` with `sudo apt install python-dev` before executing this installer. I decided to let this step to you because you need `sudo` for it and executing a hole
+script with it can be scary you know.
+
 # The problem for Kali Users
 
 If you use Kali Linux, you may have noticed that python 2 support is... not good in Kali last updates, pip for Python 2 is not even installed and you cant add it from Kali 
