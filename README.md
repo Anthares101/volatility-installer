@@ -17,4 +17,4 @@ If you use Kali Linux, you may have noticed that python 2 support is... not good
 
 Well, i wrote a little script that will install the last volatility version available and all the dependecies needed to run it. The script will install pip too using the `get-pip.py` file, thanks to this [post](https://forums.kali.org/showthread.php?48570-New-Kali-build-cannot-install-pip-for-python2-7) from the Kali forums for it.
 
-The installer will also add Volatility to your path as `volatility2` (You will need to reopen the terminal for this changes to take effect) and if you need to update Volatility just rerun the this installer (Wont duplicate anything dont worry about that).
+The installer will also add Volatility to your path as `volatility2` (You will need to reopen the terminal for this changes to take effect) and if you need to update Volatility just rerun this installer (Wont duplicate anything dont worry about that).
