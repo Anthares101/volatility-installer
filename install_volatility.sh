@@ -43,9 +43,11 @@ echo -ne "Installing pip for python 2...\t\t\t"
 if command -v pip2 &> /dev/null; then 
 	echo -e "[${GREEN}DONE${NC}]"
 else
-	python get-pip.py &> /dev/null
+	curl https://bootstrap.pypa.io/get-pip.py -o "${HOME}/volatility/get-pip.py" &> /dev/null
+	python "${HOME}/volatility/get-pip.py" &> /dev/null
 	printCommandResult
 	exitOnError
+	rm "${HOME}/volatility/get-pip.py"
 fi
 
 # Install dependencies
