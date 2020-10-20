@@ -1,8 +1,12 @@
 #! /bin/bash
 
+# Status
+STATUS=0
+
 # Colors
 RED="\e[31m"
 GREEN="\e[32m"
+YELLOW="\e[33m"
 NC="\e[0m" # No Color
 
 function printCommandResult {
@@ -11,6 +15,7 @@ function printCommandResult {
     	return 0
 	else
 		echo -e "[${RED}ERROR${NC}]"
+		STATUS=-1
 		return -1
 	fi
 }
@@ -62,4 +67,8 @@ if [ $? -ne 0 ]; then
 fi
 printCommandResult
 
-echo -e "\n${GREEN}All done! Enjoy the last volatility version!${NC}"
+if [ $STATUS -eq 0 ]; then
+	echo -e "\n${GREEN}All done! Enjoy the last volatility version!${NC}"
+else
+	echo -e "\n${YELLOW}All done! Some errors during installation, maybe Volatility dont work as expected${NC}"
+fi
