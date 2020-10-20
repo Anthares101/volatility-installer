@@ -70,5 +70,5 @@ printCommandResult
 if [ $STATUS -eq 0 ]; then
 	echo -e "\n${GREEN}All done! Enjoy the last volatility version!${NC}"
 else
-	echo -e "\n${YELLOW}All done! Some errors during installation, maybe Volatility dont work as expected${NC}"
+	echo -e "\n${YELLOW}All done! Some errors during installation, maybe volatility dont work as expected${NC}"
 fi
