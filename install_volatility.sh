@@ -35,7 +35,7 @@ exitOnError
 
 # Install pip for python 2 if necessary
 echo -ne "Installing pip for python 2...\t\t\t"
-if [ -f "${HOME}/.local/bin/pip" ] || [ -f "/usr/lib/python2.7/dist-packages/pip" ] || [ -f "/usr/lib/python/dist-packages/pip" ]; then 
+if command -v pip2 &> /dev/null; then 
 	echo -e "[${GREEN}DONE${NC}]"
 else
 	python get-pip.py &> /dev/null
