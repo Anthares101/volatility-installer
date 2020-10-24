@@ -52,7 +52,7 @@ fi
 
 # Install dependencies
 echo -ne "Installing dependencies...\t\t\t"
-pip install distorm3==3.4.4 yara-python pycrypto pillow openpyxl ujson &> /dev/null
+pip2 install distorm3==3.4.4 yara-python pycrypto pillow openpyxl ujson &> /dev/null
 printCommandResult
 
 # Create bash script for execution using path
