@@ -13,7 +13,12 @@ I tested this script in Kali Linux only, it should work in all Linux distributio
 
 If you use Kali Linux, you may have noticed that python 2 support is... not good in Kali last updates, pip for Python 2 is not even installed and you cant add it from Kali repositories. Volatility is affected by this because right now, it only works with Python 2 (I know they are working in a Python 3 version but is not done yet) and you need to  install some dependencies with pip, which is not available, so can be a bit tricky getting the last Volatility version to work properly.
 
-# Solution
+## Prerequisites
+
+Install `python-dev` with `sudo apt install python-dev` before executing this installer. I decided to let this step to you because you need `sudo` for it and executing a hole
+script with it can be scary you know. Also make sure `$HOME/.local/bin` is in your path.
+
+## Solution
 
 Well, i wrote a little script that will install the last Volatility version available and all the dependecies needed to run it. The script will install pip too using the `get-pip.py` file, you can find more information about it [here](https://pip.pypa.io/en/stable/installing/).
 
