@@ -15,8 +15,9 @@ If you use Kali Linux, you may have noticed that python 2 support is... not good
 
 ## Prerequisites
 
-Install `python-dev` with `sudo apt install python-dev` before executing this installer. I decided to let this step to you because you need `sudo` for it and executing a hole
-script with it can be scary you know. Also make sure `$HOME/.local/bin` is in your path.
+- Install `python-dev` with `sudo apt install python-dev` before executing this installer. I decided to let this step to you because you need `sudo` for it and executing a hole
+script with it can be scary you know.
+- Also make sure `$HOME/.local/bin` is in your path.
 
 ## Solution
 
