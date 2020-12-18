@@ -1,4 +1,4 @@
-<img alt="GitHub" src="https://img.shields.io/badge/version-v1.0-blue"> <img alt="GitHub" src="https://img.shields.io/github/license/anthares101/kali_volatility_installer">
+<img alt="GitHub" src="https://img.shields.io/badge/version-v1.1-blue"> <img alt="GitHub" src="https://img.shields.io/github/license/anthares101/kali_volatility_installer">
 
 # Kali Volatility installer
 
@@ -11,16 +11,16 @@ I tested this script in Kali Linux only, it should work in all Linux distributio
 
 # The problem for Kali Users
 
-If you use Kali Linux, you may have noticed that python 2 support is... not good in Kali last updates, pip for Python 2 is not even installed and you cant add it from Kali repositories. Volatility is affected by this because right now, it only works with Python 2 (I know they are working in a Python 3 version but is not done yet) and you need to  install some dependencies with pip, which is not available, so can be a bit tricky getting the last Volatility version to work properly.
+If you use Kali Linux, you may have noticed that you cant use `pip2` and if you use `pip` it will install the dependencies for Python 3. Volatility is affected by this because right now, it only works with Python 2 (I know they are working in a Python 3 version but is not done yet) and you need to  install some dependencies with pip, which is not available, so can be a bit tricky getting the last Volatility version to work properly.
 
 ## Prerequisites
 
 - Install `python-dev` with `sudo apt install python-dev` before executing this installer. I decided to let this step to you because you need `sudo` for it and executing a hole
 script with it can be scary you know.
-- Also make sure `$HOME/.local/bin` is in your path.
+- Make sure you have `python2` installed in your system. You can install it with `sudo apt install python2`
 
 ## Solution
 
-Well, i wrote a little script that will install the last Volatility version available and all the dependecies needed to run it. The script will install pip too using the `get-pip.py` file, you can find more information about it [here](https://pip.pypa.io/en/stable/installing/).
+Well, i wrote a little script that will install the last Volatility version available and all the dependecies needed to run it.
 
 The installer will also add Volatility to your path as `volatility2` (You will need to reopen the terminal for this changes to take effect) and if you need to update Volatility just rerun this installer (Wont duplicate anything dont worry about that).

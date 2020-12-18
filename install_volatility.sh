@@ -38,26 +38,14 @@ git clone "https://github.com/volatilityfoundation/volatility.git" "${HOME}/vola
 printCommandResult
 exitOnError
 
-# Install pip for python 2 if necessary
-echo -ne "Installing pip for python 2...\t\t\t"
-if command -v pip2 &> /dev/null; then 
-	echo -e "[${GREEN}DONE${NC}]"
-else
-	curl https://bootstrap.pypa.io/get-pip.py -o "${HOME}/volatility/get-pip.py" &> /dev/null
-	python "${HOME}/volatility/get-pip.py" &> /dev/null
-	printCommandResult
-	exitOnError
-	rm "${HOME}/volatility/get-pip.py"
-fi
-
 # Install dependencies
 echo -ne "Installing dependencies...\t\t\t"
-pip2 install distorm3==3.4.4 yara-python pycrypto pillow openpyxl ujson &> /dev/null
+python2 -m pip install distorm3==3.4.4 yara-python pycrypto pillow openpyxl ujson &> /dev/null
 printCommandResult
 
 # Create bash script for execution using path
 echo -ne "Create bash script for execution...\t\t"
-echo -e "#! /bin/bash\n\npython $HOME/volatility/vol.py \"\$@\"" > "${HOME}/volatility/volatility2"
+echo -e "#! /bin/bash\n\npython2 $HOME/volatility/vol.py \"\$@\"" > "${HOME}/volatility/volatility2"
 chmod u+x "${HOME}/volatility/volatility2" &> /dev/null
 printCommandResult
 
