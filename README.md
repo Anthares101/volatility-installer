@@ -15,9 +15,13 @@ If you use Kali Linux, you may have noticed that you cant use `pip2` and if you 
 
 ## Prerequisites
 
-- Install `python-dev` with `sudo apt install python-dev` before executing this installer. I decided to let this step to you because you need `sudo` for it and executing a hole
-script with it can be scary you know.
+- Install `python-dev` with `sudo apt install python-dev` before executing this installer
 - Make sure you have `python2` installed in your system. You can install it with `sudo apt install python2`
+- Install pip for python 2 in your system. If `sudo apt install python-pip` is not working for you you try the next steps:
+    - `wget https://bootstrap.pypa.io/pip/2.7/get-pip.py`
+    - `python get-pip.py`
+    - Add the line `PATH="$HOME/.local/bin:$PATH"` to `.zshrc` or `.bashrc` file
+- Once you hace pip for python2 installed run: `pip install --upgrade setuptools`
 
 ## Solution
 
