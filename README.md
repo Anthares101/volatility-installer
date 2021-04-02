@@ -1,4 +1,4 @@
-<img alt="GitHub" src="https://img.shields.io/badge/version-v1.1-blue"> <img alt="GitHub" src="https://img.shields.io/github/license/anthares101/kali_volatility_installer">
+<img alt="GitHub" src="https://img.shields.io/badge/version-v1.2-blue"> <img alt="GitHub" src="https://img.shields.io/github/license/anthares101/kali_volatility_installer">
 
 # Kali Volatility installer
 
@@ -7,7 +7,7 @@ If you researched a bit, the Volatility releases are not up to date and if you w
 
 ## Disclaimer
 
-I tested this script in Kali Linux only, it should work in all Linux distributions with Bash but you know, it is not tested ^^. Also, this script will append this line: `PATH="$HOME/volatility:$PATH"` to your `.bashrc` in order to add Volatility to your path so if you dont use Bash as your main shell you will need to add that line to the correct file (For example, if you use `zsh` add the line to your `.zshrc` file).
+I tested this script in Kali Linux only, it should work in all Linux distributions with Bash but you know, it is not tested ^^. Also, this script will append this line: `PATH="$HOME/volatility:$PATH"` to your `.bashrc` and `.zshrc` in order to add Volatility to your path so if you dont use Bash or Zsh as your main shell you will need to add that line to the correct file.
 
 # The problem for Kali Users
 
@@ -15,9 +15,13 @@ If you use Kali Linux, you may have noticed that you cant use `pip2` and if you 
 
 ## Prerequisites
 
-- Install `python-dev` with `sudo apt install python-dev` before executing this installer. I decided to let this step to you because you need `sudo` for it and executing a hole
-script with it can be scary you know.
+- Install `python-dev` with `sudo apt install python-dev` before executing this installer
 - Make sure you have `python2` installed in your system. You can install it with `sudo apt install python2`
+- Install pip for python 2 in your system. If `sudo apt install python-pip` is not working for you, you can try the next steps:
+    - `wget https://bootstrap.pypa.io/pip/2.7/get-pip.py`
+    - `python get-pip.py`
+    - Add the line `PATH="$HOME/.local/bin:$PATH"` to `.zshrc` or `.bashrc` file
+- Once you hace pip for Python 2 installed run: `pip install --upgrade setuptools`
 
 ## Solution
 

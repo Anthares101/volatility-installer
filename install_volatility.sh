@@ -54,6 +54,9 @@ echo -ne "Add volatility to path...\t\t\t"
 echo $PATH | grep -q  "$HOME/volatility"
 if [ $? -ne 0 ]; then
 	echo "PATH=\"\$HOME/volatility:\$PATH\"" >> "${HOME}/.bashrc"
+	if [ -f "${HOME}/.zshrc" ]; then
+		echo "PATH=\"\$HOME/volatility:\$PATH\"" >> "${HOME}/.zshrc"
+	fi
 fi
 printCommandResult
 
