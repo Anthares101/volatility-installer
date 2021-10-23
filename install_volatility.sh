@@ -41,16 +41,17 @@ exitOnError
 
 # Install packages
 echo -ne "Installing packages...\t\t\t\t"
-apt install -y python2 git build-essential python3-virtualenv &> /dev/null
+apt install -y python2 python-dev git build-essential python3-virtualenv &> /dev/null
 printCommandResult
 exitOnError
 
 # Clone volatility
-echo -ne "Clone volatility to your home folder...\t\t"
+echo -ne "Cloning volatility...\t\t\t\t"
 git clone "https://github.com/volatilityfoundation/volatility.git" $INSTALLATION_DIR &> /dev/null
 printCommandResult
 exitOnError
 
+# Create virtual environment
 echo -ne "Preparing Python environment...\t\t\t"
 virtualenv -p python2 ${INSTALLATION_DIR}/venv &> /dev/null
 printCommandResult
@@ -62,13 +63,13 @@ ${INSTALLATION_DIR}/venv/bin/pip install distorm3==3.4.4 yara-python pycrypto pi
 printCommandResult
 
 # Add alias to path
-ALIAS_STR="""alias volatility='${INSTALLATION_DIR}/venv/bin/python /opt/vol/vol.py'"""
+ALIAS_STR="alias volatility='${INSTALLATION_DIR}/venv/bin/python /opt/vol/vol.py'"
 USER_HOME_PATH="/home/$(id -un $ORIGINAL_USER)"
-echo -ne "Add alias for volatility to path...\t\t"
-# sed -i "/${ALIAS_STR}/d" $USER_HOME_PATH/.bashrc
+echo -ne "Adding alias for volatility to path...\t\t"
+sed -i '/alias volatility.*/d' $USER_HOME_PATH/.bashrc
 echo $ALIAS_STR >> $USER_HOME_PATH/.bashrc
 if [ -f "${HOME}/.zshrc" ]; then
-	# sed -i "/${ALIAS_STR}/d" $USER_HOME_PATH/.zshrc
+	sed -i '/alias volatility.*/d' $USER_HOME_PATH/.zshrc
 	echo $ALIAS_STR >> $USER_HOME_PATH/.zshrc
 fi
 printCommandResult
