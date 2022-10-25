@@ -42,7 +42,7 @@ exitOnError
 
 # Install packages
 echo -ne "Installing packages...\t\t\t\t"
-apt install -y python2 python-dev git build-essential python3-virtualenv &> /dev/null
+apt install -y python2 python2-dev git build-essential python3-virtualenv &> /dev/null
 printCommandResult
 exitOnError
 
