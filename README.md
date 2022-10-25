@@ -1,4 +1,4 @@
-<img alt="GitHub" src="https://img.shields.io/badge/version-v1.2-blue"> <img alt="GitHub" src="https://img.shields.io/github/license/anthares101/kali_volatility_installer">
+<img alt="GitHub" src="https://img.shields.io/badge/version-v2.1-blue"> <img alt="GitHub" src="https://img.shields.io/github/license/anthares101/kali_volatility_installer">
 
 # Volatility installer
 
